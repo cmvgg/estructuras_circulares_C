@@ -20,7 +20,7 @@ void insertAtStart(Node **head, int value);
 void printList(Node *head);
 
 // Intercambia los valores de los dos primeros nodos de la lista.
-void swap(Node **head);
+void swap(Node *head);
 
 // Mueve el primer nodo de la lista de origen a la lista de destino.
 void push(Node **source, Node **destination);

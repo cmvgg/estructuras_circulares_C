@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
     printList(stackA);
 
     printf("\nProbando swap en stackA:\n");
-    swap(&stackA);
+    swap(stackA);
     printList(stackA);
 
     return 0;
