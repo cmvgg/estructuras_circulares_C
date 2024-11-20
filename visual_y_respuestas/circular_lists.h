@@ -1,0 +1,48 @@
+#ifndef CIRCULAR_LISTS_H
+#define CIRCULAR_LISTS_H
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <signal.h>
+
+// Definición de la estructura Node para una lista circular
+typedef struct Node {
+	int value;
+    struct Node *next;
+} Node;
+
+// Crea un nuevo nodo con un valor dado.
+Node *createNode(int value, int *i);
+
+// Inserta un nodo al inicio de la lista circular.
+void insertAtStart(Node **head, int value, int *i);
+
+// Imprime todos los elementos de la lista circular.
+void printList(Node *head);
+
+// Intercambia los valores de los dos primeros nodos de la lista.
+Node *swap(Node *head, int *i);
+
+// Mueve el primer nodo de la lista de origen a la lista de destino.
+void push(Node **source, Node **destination);
+
+// Rota la lista para que el segundo nodo se convierta en el primero.
+void rotate(Node **head);
+
+// Rota en sentido inverso para que el último nodo sea el primero.
+void reverseRotate(Node **head);
+
+// Cuenta y retorna la cantidad de nodos en la lista.
+int countNodes(Node *head);
+
+// Imprime el paso a paso del programa. ¡¡¡NO TOCAR!!!
+int replaceDotContent(const char *newDotContent, const char *insertPoint, int flag);
+
+int replaceDotContent2(const char *newDotContent, const char *insertPoint, int flag);
+
+int replaceDotContent3(const char *newDotContent, const char *insertPoint, int flag);
+
+#endif // CIRCULAR_LIST_H
